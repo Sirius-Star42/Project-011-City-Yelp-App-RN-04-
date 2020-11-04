@@ -1,12 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
-import { SafeAreaView, View, Text } from 'react-native-safe-area-context';
+import {SafeAreaView, View, Text } from 'react-native';
+
 
 const RestaurantList = () => {
     return (
         <SafeAreaView>
             <View>
-                <Text>CityList</Text>
+                <Text>restaurants</Text>
             </View>
         </SafeAreaView>
     )
