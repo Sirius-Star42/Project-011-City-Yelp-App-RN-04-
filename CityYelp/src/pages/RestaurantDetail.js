@@ -25,3 +25,16 @@ const RestaurantDetail = (props) => {
 }
 
 export {RestaurantDetail};
+
+const styles = StyleSheet.create({
+    container: { flex: 1, padding: 10 },
+    name: { fontWeight: '300', fontSize: 30 },
+    image: { height: Dimensions.get('window').height / 3 },
+    infoContainer: {
+        backgroundColor: '#29b6f6',
+        padding: 10,
+        margin: 5,
+        borderRadius: 5
+    },
+    infoText: { color: 'white', fontWeight: 'bold' }
+})

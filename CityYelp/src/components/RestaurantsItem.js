@@ -6,9 +6,9 @@ const RestaurantsItem = (props) => {
         <TouchableOpacity style={styles.container} onPress={props.onSelect}>
             <Image
                 style={styles.image}
-                source={{uri: props.restaurants.image_url}}
+                source={{uri: props.restaurant.image_url}}
             />
-            <Text style={styles.name}>{props.restaurants.name}</Text>
+            <Text style={styles.name}>{props.restaurant.name}</Text>
         </TouchableOpacity>
     )
 }

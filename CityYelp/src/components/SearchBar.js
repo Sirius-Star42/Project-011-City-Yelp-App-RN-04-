@@ -6,19 +6,19 @@ const SearchBar = (props) => {
         <View style={styles.container}>
             <TextInput
                 placeholder={props.placeholder}
-                onChangeText={(value) => props.onSearch(value)}
-            
+                onChangeText={(value) => props.onSearch(value)}   
             />
         </View>
     )
 };
 
 export {SearchBar};
+
 const styles=StyleSheet.create({
     container: {
-        backgroundColor: 'yellow',
+        backgroundColor: '#ffc05f',
         margin: 5,
-        padding: 5,
-        borderRadius: 5,
+        padding: 2,
+        borderRadius: 12,
     }
 })

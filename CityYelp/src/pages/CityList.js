@@ -3,15 +3,10 @@ import React, {useState, useEffect} from 'react';
 import { SafeAreaView, View, Text, FlatList} from 'react-native';
 import {CityItem, SearchBar} from '../components'
 
-
-
-
-
 let originalList= [];
 
 const CityList = (props) => {
     const [cityList, setCityList] = useState([]);
-    
 
     //ASYNC-AWAITS
     const fetchCityData = async () => {
@@ -27,16 +22,16 @@ const CityList = (props) => {
     const renderCities = ({item}) => {
         return (
             <CityItem
-             cityName= {item}
-             onSelect={() => {
-                 props.navigation.navigate('Restaurants', {selectedCity : item} )
-             }} 
+                cityName= {item}
+                onSelect={() => {
+                    props.navigation.navigate('Restaurants', {selectedCity : item} )
+             }}
              />
         )
     }
-    const renderSeperator = () => <View style={{borderWidth: 1, borderColor: 'black'}}/>
+    const renderSeperator = () => <View style={{borderWidth: 0.7, borderColor: '#3196E2'}}/>
 
-    function searchCity (search) {
+    function searchCity(search) {
         const filteredCity = originalList.filter(city =>{
             const text = search.toUpperCase();
             const cityName = city.toUpperCase();

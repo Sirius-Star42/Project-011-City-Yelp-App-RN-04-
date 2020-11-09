@@ -13,11 +13,11 @@ export {CityItem};
 
 const styles =StyleSheet.create({
     container: {
-        padding: 10,
+        padding: 5,
         alignItems: "center",
     },
     text: {
-        fontSize: 20,
-        fontWeight: '300',
+        fontSize: 18,
+        fontWeight: '200',
     }
 })
