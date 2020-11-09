@@ -1,12 +1,24 @@
 import React from 'react';
-import { SafeAreaView, View, Text } from 'react-native';
+import { SafeAreaView, View, Text, StyleSheet, Image, Dimensions, Button, Linking } from 'react-native';
 
 
-const RestaurantDetail = () => {
+const RestaurantDetail = (props) => {
+    const { selectedRestaurant } = props.route.params;
+
     return (
-        <SafeAreaView>
-            <View>
-                <Text>details</Text>
+        <SafeAreaView style={{ flex: 1}}>
+            <View style={styles.container}>
+                <Text style={styles.name}>{selectedRestaurant.name}</Text>
+                <Image
+                    style={styles.image}
+                    source={{uri: selectedRestaurant.image_url}}
+                />
+                <View style={styles.infoContainer}>
+                    <Text style={styles.infoText}>{selectedRestaurant.area}</Text>
+                </View>
+                <View style={styles.infoContainer}>
+                    <Text style={styles.infoText}>{selectedRestaurant.phone}</Text>
+                </View>
             </View>
         </SafeAreaView>
     )

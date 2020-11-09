@@ -6,7 +6,7 @@ const SearchBar = (props) => {
         <View style={styles.container}>
             <TextInput
                 placeholder={props.placeholder}
-                onChangeText={(value) => props.onSearc(value)}
+                onChangeText={(value) => props.onSearch(value)}
             
             />
         </View>
