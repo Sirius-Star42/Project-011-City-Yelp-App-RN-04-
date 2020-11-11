@@ -1,7 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
-
 const CityItem = (props) => {
     return (
         <TouchableOpacity style={styles.container} onPress={props.onSelect}>

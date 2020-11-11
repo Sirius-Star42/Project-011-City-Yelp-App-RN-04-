@@ -1,13 +1,8 @@
 import React, {useCallback} from 'react';
 import { SafeAreaView, View, Text, StyleSheet, Image, Dimensions, TouchableOpacity, Linking } from 'react-native';
 
-
-
 const RestaurantDetail = (props) => {
     const { selectedRestaurant } = props.route.params;
-
-
-
 
     return (
         <SafeAreaView style={{ flex: 1}}>

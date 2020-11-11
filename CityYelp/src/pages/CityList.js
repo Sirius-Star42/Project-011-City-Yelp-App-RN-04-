@@ -5,8 +5,7 @@ import {CityItem, SearchBar} from '../components';
 
 let originalList= [];
 
-const CityList = (props) => {
-    
+const CityList = (props) => { 
 
     const [cityList, setCityList] = useState([]);
 

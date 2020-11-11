@@ -1,7 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, View, Text, Image, StyleSheet, Dimensions} from 'react-native';
 
-
 const RestaurantsItem = (props) => {
     return (
         <TouchableOpacity style={styles.container} onPress={props.onSelect}>
