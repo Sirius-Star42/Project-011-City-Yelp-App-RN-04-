@@ -15,6 +15,9 @@ const styles =StyleSheet.create({
     container: {
         padding: 5,
         alignItems: "center",
+        backgroundColor: '#53d2dc',
+        borderRadius: 8,
+        margin: 1,
     },
     text: {
         fontSize: 18,

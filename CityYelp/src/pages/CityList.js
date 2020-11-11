@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import { SafeAreaView, View, Text, FlatList} from 'react-native';
-import {CityItem, SearchBar} from '../components'
+import {CityItem, SearchBar} from '../components';
 
 let originalList= [];
 
 const CityList = (props) => {
+    
+
     const [cityList, setCityList] = useState([]);
 
     //ASYNC-AWAITS
@@ -13,6 +15,7 @@ const CityList = (props) => {
         const {data} = await axios.get('http://opentable.herokuapp.com/api/cities');
         setCityList(data.cities);
         originalList = [...data.cities];
+        
     }
 
     useEffect(() => {
@@ -29,7 +32,7 @@ const CityList = (props) => {
              />
         )
     }
-    const renderSeperator = () => <View style={{borderWidth: 0.7, borderColor: '#3196E2'}}/>
+    const renderSeperator = () => <View style={{}}/>
 
     function searchCity(search) {
         const filteredCity = originalList.filter(city =>{
@@ -40,9 +43,9 @@ const CityList = (props) => {
         })
         setCityList(filteredCity);
     }
-
+    
     return (
-        <SafeAreaView>
+        <SafeAreaView >
             <View>
                 <Text style={{margin: 5, fontWeight: "bold", fontSize: 30}}>Cities</Text>
                 <SearchBar
@@ -53,8 +56,8 @@ const CityList = (props) => {
                     data={cityList}
                     renderItem={renderCities}
                     keyExtractor={(_, index) =>index.toString()}
-                    ItemSeparatorComponent={renderSeperator}
-                
+                    ItemSeparatorComponent={renderSeperator}             
+    
                 />
             </View>
         </SafeAreaView>
@@ -62,3 +65,7 @@ const CityList = (props) => {
 }
 
 export {CityList};
+
+
+
+

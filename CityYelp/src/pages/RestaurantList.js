@@ -61,6 +61,7 @@ const RestaurantList = (props) => {
                     data={restaurantList}
                     renderItem={renderRestaurants}
                     keyExtractor={(_, index) => index.toString()}
+                    
                 />
             </View>
         </SafeAreaView>
